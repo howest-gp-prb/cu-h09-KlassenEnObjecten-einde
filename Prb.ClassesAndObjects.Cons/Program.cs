@@ -10,23 +10,36 @@ namespace Prb.ClassesAndObjects.Cons
             Car newCar;
             newCar = new Car();
 
-            newCar.color = "zwart";
-            newCar.brand = "Hyundai";
-            newCar.price = 15000M;
+            newCar.SetColor("zwart");
+            newCar.SetBrand("Hyundai");
+            try
+            {
+                newCar.SetPrice(15000M);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Prijs niet aanvaard: \n" + ex.Message);
+            }
 
             Car secondCar;
             secondCar = new Car();
 
-            secondCar.color = "wit";
-            secondCar.brand = "Ford";
-            secondCar.price = 9000M;
+            secondCar.SetColor("turquoise");
+            secondCar.SetBrand("Ford");
+            try
+            {
+                secondCar.SetPrice(9000M);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Prijs niet aanvaard: \n" + ex.Message);
+            }
 
-            Console.WriteLine($"De nieuwe auto is een {newCar.brand}, is {newCar.color} van kleur en kost {newCar.price}");
-            Console.WriteLine("============");
-            Console.WriteLine($"De tweede auto is een {secondCar.brand}, is {secondCar.color} van kleur en kost {secondCar.price}");
+            //Console.WriteLine($"De nieuwe auto is een {newCar.brand}, is {newCar.color} van kleur en kost {newCar.price}");
+            //Console.WriteLine("============");
+            //Console.WriteLine($"De tweede auto is een {secondCar.brand}, is {secondCar.color} van kleur en kost {secondCar.price}");
 
             Console.ReadLine();
-
         }
     }
 }
