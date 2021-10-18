@@ -8,6 +8,8 @@ namespace Prb.ClassesAndObjects.Core
 {
     public class Car
     {
+        //In onderstaande region staan onze fields en get-en set-methoden
+        #region Fields, get- en set-methoden
         private string brand;
         private string color;
         private decimal price;
@@ -36,12 +38,12 @@ namespace Prb.ClassesAndObjects.Core
             if (availableColors.Contains(newColor))
                 color = newColor;
             else
-                color = "Wit";
+                color = "wit";
         }
 
         public decimal GetPrice()
         {
-            return price * 1.21M ;
+            return price * 1.21M;
         }
 
         public void SetPrice(decimal price)
@@ -60,7 +62,39 @@ namespace Prb.ClassesAndObjects.Core
             else
                 info += "Contacteer je dealer voor meer prijsinfo";
             return info;
+        } 
+        #endregion
+
+        public Car()  // dit is het equivalent van de default constructor
+        {
+            brand = null;
+            color = null;
+            price = 0;
         }
 
+        public Car(string brand) // Constructor ontvangt 1 parameter
+        {
+            this.brand = brand;
+        }
+
+        public Car(string brand, string color) // Constructor ontvangt 2 parameters
+        {
+            this.brand = brand;
+            SetColor(color);
+        }
+
+        public Car(string brand, string color, decimal price) // Constructor ontvangt 3 parameters
+        {
+            this.brand = brand;
+            SetColor(color);
+            try
+            {
+                SetPrice(price);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

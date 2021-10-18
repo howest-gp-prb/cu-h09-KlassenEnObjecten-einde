@@ -35,6 +35,8 @@ namespace Prb.ClassesAndObjects.Cons
                 Console.WriteLine("Prijs niet aanvaard: \n" + ex.Message);
             }
 
+            Car thirdCar = new Car("Audi", "blauw", 25000M);
+
             Console.WriteLine($"De nieuwe auto is een {newCar.GetBrand()}, " +
                 $"is {newCar.GetColor()} van kleur en kost {newCar.GetPrice()} incl. BTW");
             Console.WriteLine("============");
@@ -43,6 +45,9 @@ namespace Prb.ClassesAndObjects.Cons
             Console.WriteLine("============");
             Console.WriteLine(newCar.GetAllInfo());
 
+            Console.WriteLine("============");
+            Console.WriteLine($"De derde auto is een {thirdCar.GetBrand()}, " +
+                $"is {thirdCar.GetColor()} van kleur en kost {thirdCar.GetPrice()}");
 
             Console.ReadLine();
         }
