@@ -8,11 +8,20 @@ namespace Prb.ClassesAndObjects.Core
 {
     public class Car
     {
+        private static int carCount;
+
+        public static int GetCarCount()
+        {
+            return carCount;
+        }
+
         //In onderstaande region staan onze fields en get-en set-methoden
         #region Fields, get- en set-methoden
         private string brand;
         private string color;
         private decimal price;
+
+
 
         public string GetBrand()
         {
@@ -70,20 +79,21 @@ namespace Prb.ClassesAndObjects.Core
             brand = null;
             color = null;
             price = 0;
+            carCount++;
         }
 
-        public Car(string brand) // Constructor ontvangt 1 parameter
+        public Car(string brand) : this() // Constructor ontvangt 1 parameter
         {
             this.brand = brand;
         }
 
-        public Car(string brand, string color) // Constructor ontvangt 2 parameters
+        public Car(string brand, string color) : this() // Constructor ontvangt 2 parameters
         {
             this.brand = brand;
             SetColor(color);
         }
 
-        public Car(string brand, string color, decimal price) // Constructor ontvangt 3 parameters
+        public Car(string brand, string color, decimal price) : this() // Constructor ontvangt 3 parameters
         {
             this.brand = brand;
             SetColor(color);
