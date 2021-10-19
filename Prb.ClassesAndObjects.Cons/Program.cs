@@ -12,28 +12,15 @@ namespace Prb.ClassesAndObjects.Cons
 
             newCar.SetColor("zwart");
             newCar.SetBrand("Hyundai");
-            try
-            {
-                newCar.SetPrice(15000M);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Prijs niet aanvaard: \n" + ex.Message);
-            }
+            newCar.SetPrice(15000M);
+
 
             Car secondCar;
             secondCar = new Car();
 
             secondCar.SetColor("turquoise");
             secondCar.SetBrand("Ford");
-            try
-            {
-                secondCar.SetPrice(9000M);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Prijs niet aanvaard: \n" + ex.Message);
-            }
+            secondCar.SetPrice(19000M);
 
             Car thirdCar = new Car("Audi", "blauw", 25000M);
 

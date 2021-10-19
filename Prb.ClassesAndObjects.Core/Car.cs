@@ -71,7 +71,7 @@ namespace Prb.ClassesAndObjects.Core
             else
                 info += "Contacteer je dealer voor meer prijsinfo";
             return info;
-        } 
+        }
         #endregion
 
         public Car()  // dit is het equivalent van de default constructor
@@ -97,14 +97,7 @@ namespace Prb.ClassesAndObjects.Core
         {
             this.brand = brand;
             SetColor(color);
-            try
-            {
-                SetPrice(price);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            SetPrice(price);
         }
     }
 }
