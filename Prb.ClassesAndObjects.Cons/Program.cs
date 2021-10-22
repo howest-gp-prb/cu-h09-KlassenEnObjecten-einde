@@ -14,7 +14,6 @@ namespace Prb.ClassesAndObjects.Cons
             newCar.SetBrand("Hyundai");
             newCar.SetPrice(15000M);
 
-
             Car secondCar;
             secondCar = new Car();
 
