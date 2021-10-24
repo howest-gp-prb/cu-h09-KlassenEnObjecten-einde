@@ -10,30 +10,30 @@ namespace Prb.ClassesAndObjects.Cons
             Car newCar;
             newCar = new Car();
 
-            newCar.SetColor("zwart");
-            newCar.SetBrand("Hyundai");
-            newCar.SetPrice(15000M);
+            newCar.Color = "zwart";
+            newCar.Brand = "Hyundai";
+            newCar.Price = 15000M;
 
             Car secondCar;
             secondCar = new Car();
 
-            secondCar.SetColor("turquoise");
-            secondCar.SetBrand("Ford");
-            secondCar.SetPrice(19000M);
+            secondCar.Color = "turquoise";
+            secondCar.Brand = "Ford";
+            secondCar.Price = 19000M;
 
             Car thirdCar = new Car("Audi", "blauw", 25000M);
 
-            Console.WriteLine($"De nieuwe auto is een {newCar.GetBrand()}, " +
-                $"is {newCar.GetColor()} van kleur en kost {newCar.GetPrice()} incl. BTW");
+            Console.WriteLine($"De nieuwe auto is een {newCar.Brand}, " +
+                $"is {newCar.Color} van kleur en kost {newCar.Price} incl. BTW");
             Console.WriteLine("============");
-            Console.WriteLine($"De tweede auto is een {secondCar.GetBrand()}, " +
-                $"is {secondCar.GetColor()} van kleur en kost {secondCar.GetPrice()} incl. BTW");
+            Console.WriteLine($"De tweede auto is een {secondCar.Brand}, " +
+                $"is {secondCar.Color} van kleur en kost {secondCar.Price} incl. BTW");
             Console.WriteLine("============");
-            Console.WriteLine(newCar.GetAllInfo());
+            Console.WriteLine(newCar.GetAllInfo);
 
             Console.WriteLine("============");
-            Console.WriteLine($"De derde auto is een {thirdCar.GetBrand()}, " +
-                $"is {thirdCar.GetColor()} van kleur en kost {thirdCar.GetPrice()}");
+            Console.WriteLine($"De derde auto is een {thirdCar.Brand}, " +
+                $"is {thirdCar.Color} van kleur en kost {thirdCar.Price}");
 
             Console.ReadLine();
         }

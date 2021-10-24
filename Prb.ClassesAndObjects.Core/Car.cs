@@ -19,70 +19,64 @@ namespace Prb.ClassesAndObjects.Core
         #region Fields, get- en set-methoden
         #endregion
 
-        private string brand;
         private string color;
         private decimal price;
 
-        public void SetBrand(string newBrand)
-        {
-            brand = newBrand;
-        }
-        public string GetBrand()
-        {
-            return brand;
-        }
+        public string Brand { get; set; }
 
-        public void SetColor(string newColor)
+        public string Color
         {
+            get { return color; }
+            set 
+            { 
             string[] availableColors = { "wit", "rood", "zwart" };
-            if (availableColors.Contains(newColor)) color = newColor;
-            else color = "wit";
+            if (availableColors.Contains(value)) color = value;
+            else color = "wit";                
+            }
         }
 
-        public string GetColor()
+        public decimal Price
         {
-            return color;
+            get { return price; }
+            set 
+            {
+                if (value < 15000M || price > 30000M)
+                    throw new Exception("Geef een prijs tussen de 15 000 en 30 000 euro");
+                else price = value;
+            }
         }
 
-        public void SetPrice(decimal price)
+        public string GetAllInfo
         {
-            if (price < 15000M || price > 30000M)
-                throw new Exception("Geef een prijs tussen de 15 000 en 30 000 euro");
-            else this.price = price;
-        }
-        public decimal GetPrice()
-        {
-            return price;
-        }
-
-        public string GetAllInfo()
-        {
-            string info = $"Merk: {brand}\nKleur: {color}\n";
-            if (price < 25000) info += $"Prijs excl. BTW: {price}\nPrijs incl. BTW: {GetPrice()}";
+            get
+            {
+            string info = $"Merk: {Brand}\nKleur: {color}\n";
+            if (Price < 25000) info += $"Prijs excl. BTW: {Price}\nPrijs incl. BTW: {Price * 0.21M}";
             else info += "Contacteer je dealer voor meer prijsinfo";
             return info;
+            }
         }
 
         public Car()  // dit is het equivalent van de default constructor
         {
-            brand = null;
-            color = null;
-            price = 0;
+            Brand = null;
+            Color = null;
+            Price = 15000M;
         }
 
         public Car(string brand) : this() // Constructor ontvangt 1 parameter
         {
-            this.brand = brand;
+            Brand = brand;
         }
 
         public Car(string brand, string color) : this(brand) // Constructor ontvangt 2 parameters
         {
-            SetColor(color);
+            Color = color;
         }
 
         public Car(string brand, string color, decimal price) : this(brand, color) // Constructor ontvangt 3 parameters
         {
-            SetPrice(price);
+            Price = price;
         }
     }
 }
