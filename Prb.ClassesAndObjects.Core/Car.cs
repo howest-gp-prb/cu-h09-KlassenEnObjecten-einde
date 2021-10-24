@@ -6,21 +6,13 @@ using System.Threading.Tasks;
 
 namespace Prb.ClassesAndObjects.Core
 {
-    public class Car
-    {
-        //private static int carCount;
-
-        //public static int GetCarCount()
-        //{
-        //    return carCount;
-        //}
-
+public partial class Car
+{
         //In onderstaande region staan onze fields en get-en set-methoden
-        #region Fields, get- en set-methoden
-        #endregion
-
+        #region Reeds bestaande fields en properties
         private string color;
         private decimal price;
+        private static int carCount;
 
         public string Brand { get; set; }
 
@@ -45,6 +37,11 @@ namespace Prb.ClassesAndObjects.Core
                 else price = value;
             }
         }
+        public static int CarCount
+        {
+            get { return carCount; }
+            private set { carCount = value; }
+        }
 
         public string GetAllInfo
         {
@@ -56,12 +53,14 @@ namespace Prb.ClassesAndObjects.Core
             return info;
             }
         }
+        #endregion
 
         public Car()  // dit is het equivalent van de default constructor
         {
             Brand = null;
             Color = null;
             Price = 15000M;
+            CarCount++;
         }
 
         public Car(string brand) : this() // Constructor ontvangt 1 parameter
@@ -78,5 +77,8 @@ namespace Prb.ClassesAndObjects.Core
         {
             Price = price;
         }
+
+
+
     }
 }
