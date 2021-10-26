@@ -47,8 +47,8 @@ public partial class Car
         {
             get
             {
-            string info = $"Merk: {Brand}\nKleur: {color}\n";
-            if (Price < 25000) info += $"Prijs excl. BTW: {Price}\nPrijs incl. BTW: {Price * 0.21M}";
+            string info = $"Merk: {Brand}\nKleur: {Color}\n";
+            if (Price < 25000) info += $"Prijs excl. BTW: {Price}\nPrijs incl. BTW: {Price * 1.21M}";
             else info += "Contacteer je dealer voor meer prijsinfo";
             return info;
             }
