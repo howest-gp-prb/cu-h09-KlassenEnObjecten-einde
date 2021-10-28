@@ -9,6 +9,11 @@ namespace Prb.ClassesAndObjects.Core
 {
     public partial class Car
     {
+        public override string ToString()
+        {
+            return $"{Brand} - {Color}";
+        }
+
         public decimal PriceDifference(Car someCar)
         {
             return Math.Abs(Price - someCar.Price);

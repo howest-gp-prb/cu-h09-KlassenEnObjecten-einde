@@ -42,6 +42,10 @@ class Program
         Console.WriteLine("============");
         Console.WriteLine($"Prijsverschil tussen {newCar.Price} en {thirdCar.Price} is {costDifference}");
 
+        var anonymous = new { Name = "Peter", Age = 40 };
+        Console.WriteLine("============");
+        Console.WriteLine($"Anonymous heet {anonymous.Name}, is {anonymous.Age} jaar oud en is van het type {anonymous.GetType().Name}");
+
 
         Console.ReadLine();
     }
