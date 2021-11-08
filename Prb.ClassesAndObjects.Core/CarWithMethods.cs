@@ -55,7 +55,7 @@ namespace Prb.ClassesAndObjects.Core
         public string GetAllInfo()
         {
             string info = $"Merk: {GetBrand()}\nKleur: {GetColor()}\n";
-            if (GetPrice() < 25000) info += $"Prijs excl. BTW: {GetPrice()}\nPrijs incl. BTW: {GetPrice() * 0.21M}";
+            if (GetPrice() < 25000) info += $"Prijs excl. BTW: {GetPrice()}\nPrijs incl. BTW: {GetPrice() * 1.21M}";
             else info += "Contacteer je dealer voor meer prijsinfo";
             return info;
         }

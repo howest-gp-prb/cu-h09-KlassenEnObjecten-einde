@@ -21,9 +21,9 @@ public partial class Car
             get { return color; }
             set 
             { 
-            string[] availableColors = { "wit", "rood", "zwart" };
-            if (availableColors.Contains(value)) color = value;
-            else color = "wit";                
+                string[] availableColors = { "wit", "rood", "zwart" };
+                if (availableColors.Contains(value)) color = value;
+                else color = "wit";                
             }
         }
 
