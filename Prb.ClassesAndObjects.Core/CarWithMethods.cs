@@ -39,8 +39,6 @@ namespace Prb.ClassesAndObjects.Core
             else color = "wit";
         }
 
-
-
         public void SetPrice(decimal price)
         {
             if (price < 15000M || price > 30000M)

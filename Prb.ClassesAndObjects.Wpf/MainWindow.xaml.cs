@@ -21,7 +21,6 @@ namespace Prb.ClassesAndObjects.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
-
         List<Car> cars;
 
         public MainWindow()
@@ -33,7 +32,6 @@ namespace Prb.ClassesAndObjects.Wpf
                 new Car("Citroën", "rood", 16000M),
                 new Car("VW", "zwart", 17000M)
             };
-            
         }
 
         private void BtnAddNewCar_Click(object sender, RoutedEventArgs e)
