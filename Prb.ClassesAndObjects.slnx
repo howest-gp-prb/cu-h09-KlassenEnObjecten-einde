@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Prb.ClassesAndObjects.Cons/Prb.ClassesAndObjects.Cons.csproj" />
+  <Project Path="Prb.ClassesAndObjects.Core/Prb.ClassesAndObjects.Core.csproj" />
+  <Project Path="Prb.ClassesAndObjects.Wpf/Prb.ClassesAndObjects.Wpf.csproj" />
+</Solution>
